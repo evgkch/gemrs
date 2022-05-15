@@ -92,7 +92,7 @@ impl<T: Div<Output=T> + Copy> Div<T> for Vector2<T> {
     }
 }
 
-/// (*=): Vector × K -> Vector
+/// (/=): Vector × K -> Vector
 /// where K is a ring
 impl<T: Div<Output=T> + Copy> DivAssign<T> for Vector2<T> {
     fn div_assign(&mut self, k: T) {
@@ -100,7 +100,7 @@ impl<T: Div<Output=T> + Copy> DivAssign<T> for Vector2<T> {
     }
 }
 
-impl<T: Add<Output=T> + Mul<Output=T>> Point2<T> {
+impl<T: Add<Output=T> + Mul<Output=T>> Vector2<T> {
     /// dot: Vector × Vector -> K
     /// where K is a ring
     pub fn dot(self, v: Vector2<T>) -> T {
